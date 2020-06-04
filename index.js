@@ -1,6 +1,8 @@
 // listens for mouse click to play game
 document.addEventListener("click", function(event) {
   play();
+  document.querySelectorAll("div p")[0].hidden = false;
+  document.querySelectorAll("div p")[1].hidden = false;
 });
 
 function play() {
@@ -19,9 +21,9 @@ function play() {
   var winner = "";
   // checks for winner
   if (randomNumber1 > randomNumber2) {
-    winner = "🚩 Player 1 Wins!"
+    winner = "🏆 Player 1 Wins!"
   } else if (randomNumber2 > randomNumber1) {
-    winner = "Player 2 Wins! 🚩"
+    winner = "Player 2 Wins! 🏆"
   } else {
     winner = "😱 Draw! 😱"
   }
